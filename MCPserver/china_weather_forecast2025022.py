@@ -28,7 +28,7 @@ plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei']  # 添加中文�
 plt.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
 
 #中国城市adcode对照表
-df_adcode  = pd.read_csv('China-City-List-latest.csv', header=1)
+df_adcode  = pd.read_csv('files/China-City-List-latest.csv', header=1)
 
 def get_api_data(url, params=None, headers=None):
     try:
@@ -48,7 +48,7 @@ def get_location_id(location:str):
     return location_id
 def get_areas(location_id):
     AD_code = df_adcode.loc[df_adcode['Location_ID']==location_id,'AD_code'].values[0]
-    with open(f'geo-json/{AD_code}.txt',encoding='utf-8') as f:
+    with open(f'files/geo-json/{AD_code}.txt',encoding='utf-8') as f:
         geo_json = geojson.load(f)
     adcode_list = []
     for i in range(len(geo_json['features'])):
