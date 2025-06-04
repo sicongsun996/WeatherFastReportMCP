@@ -35,6 +35,11 @@
 
 ## 使用说明
 
+# 和风天气API常量,此处需要输入你的和风天气API BASE 还有 API KEY
+HEWEATHER_API_BASE = "https://YOUR-API-BASE.re.qweatherapi.com"
+params = {'key':'YOUR-API-KEY'}
+headers = {"Authorization": "Bearer your_token"}
+
 ### 天气预报查询
 通过MCP工具`fastreport_in_word`查询天气：
 ```python
