@@ -35,7 +35,8 @@
 
 ## 使用说明
 
-# 和风天气API常量,此处需要输入你的和风天气API BASE 还有 API KEY
+### 配置API key
+和风天气API常量,此处需要输入你的和风天气API BASE 还有 API KEY
 HEWEATHER_API_BASE = "https://YOUR-API-BASE.re.qweatherapi.com"
 params = {'key':'YOUR-API-KEY'}
 headers = {"Authorization": "Bearer your_token"}
